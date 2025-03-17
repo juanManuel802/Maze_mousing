@@ -23,3 +23,15 @@ void Spot::setLoc_r(int loc_r) {
 void Spot::setLoc_c(int loc_c) {
     this->loc_c = loc_c;
 }
+
+void Spot::moveSpot(string dir, spot &mouse) { //Mover esto a la clase spot
+    if(dir == "up") {
+        mouse.setLoc_c(mouse.setLoc_c - 1);
+    } else if(dir == "down") {
+        mouse.setLoc_c(mouse.setLoc_c + 1);
+    } if(dir == "right") {
+        mouse.setLoc_r(mouse.setLoc_r + 1);
+    } else if(dir == "left") {
+        mouse.setLoc_r(mouse.setLoc_r - 1);
+    }
+}

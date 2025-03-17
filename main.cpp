@@ -47,6 +47,8 @@ void placeMouse(int row, int column, char laberinto[FILAS][COLUMNAS], Spot &mous
 
 }
 
+
+
 int main() {
     char laberinto[FILAS][COLUMNAS];
 
@@ -66,5 +68,17 @@ int main() {
     
     placeMouse(mouse.getLoc_r(), mouse.getLoc_c(), laberinto, mouse);
     mostrarLaberinto(laberinto);
+
+    while (true) {
+        
+        if ()
+        mouse.move("up");
+
+    }
+
+
+
+
+
     return 0;
 }

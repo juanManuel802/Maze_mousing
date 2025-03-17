@@ -3,7 +3,7 @@
 
 class Spot {
 private:
-    int loc_r; // Row location
+    int loc_r; // Row location 
     int loc_c; // Column location
 
 public:
@@ -12,12 +12,14 @@ public:
     Spot(int row, int col) : loc_r(row), loc_c(col) {}
 
     // Getters
-    int getLoc_r() const { return loc_r; }
-    int getLoc_c() const { return loc_c; }
+    int getLoc_r() const;
+    int getLoc_c() const;
 
     // Setters
-    void setLoc_r(int row) { loc_r = row; }
-    void setLoc_c(int col) { loc_c = col; }
+    void setLoc_r(int row);
+    void setLoc_c(int col);
+
+    void moveSpot(string dir, spot &mouse);
 };
 
 #endif // SPOT_H
