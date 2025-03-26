@@ -1,5 +1,7 @@
 #ifndef SPOT_H
 #define SPOT_H
+#include <iostream>
+using namespace std;
 
 class Spot {
 private:
@@ -18,8 +20,7 @@ public:
     // Setters
     void setLoc_r(int row);
     void setLoc_c(int col);
-
-    void moveSpot(string dir, spot &mouse);
+    friend ostream& operator<<(ostream& os, const Spot& spot);
 };
 
 #endif // SPOT_H

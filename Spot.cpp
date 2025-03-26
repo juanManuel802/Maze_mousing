@@ -1,8 +1,9 @@
 #include "Spot.h"
-
+#include <iostream>
+using namespace std;
 // Constructor
 
-Spot::Spot(int loc_r, int loc_c) : loc_r(loc_r), loc_c(loc_c) {}
+//Spot::Spot(int row, int col) : loc_r(row), loc_c(col) {}
 
 // Getter for loc_r coordinate
 int Spot::getLoc_r() const {
@@ -24,14 +25,8 @@ void Spot::setLoc_c(int loc_c) {
     this->loc_c = loc_c;
 }
 
-void Spot::moveSpot(string dir, spot &mouse) { //Mover esto a la clase spot
-    if(dir == "up") {
-        mouse.setLoc_c(mouse.setLoc_c - 1);
-    } else if(dir == "down") {
-        mouse.setLoc_c(mouse.setLoc_c + 1);
-    } if(dir == "right") {
-        mouse.setLoc_r(mouse.setLoc_r + 1);
-    } else if(dir == "left") {
-        mouse.setLoc_r(mouse.setLoc_r - 1);
-    }
+
+ostream& operator<<(ostream& os, const Spot& spot) {
+    os << "(" << spot.getLoc_r() << ", " << spot.getLoc_c() << ")";
+    return os;
 }
